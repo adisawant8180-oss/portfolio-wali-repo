@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Heramb Yadav Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* LEFT PANEL */
+.left {
+    width: 30%;
+    background: linear-gradient(180deg,#1e3c72,#2a5298);
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border: 4px solid white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+#themeToggle {
+    margin: 10px auto 20px;
+    display: block;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* RIGHT PANEL */
+.right {
+    width: 70%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.name {
+    font-size: 52px;
+    font-weight: 700;
+    color: #1e3c72;
+    margin: 0;
+}
+
+.title {
+    font-size: 22px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* SECTIONS */
+.section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.6s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section h2 {
+    border-bottom: 2px solid #1e3c72;
+    padding-bottom: 5px;
+}
+
+/* DARK MODE */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .right { background: #121212; }
+.dark .section { background: #1e1e1e; color: white; }
+.dark .name { color: white; }
+
+/* TOP BUTTON */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    display: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 500px) {
+    .name {
+        font-size: 28px;
+    }
+
+    .right {
+        padding: 18px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- LEFT -->
+<div class="left">
+    <img src="C:\Users\Aditya Sawant\OneDrive\Desktop\CT\AS11.jpeg" class="profile-img">
+
+    <button id="themeToggle">Dark Mode</button>
+
+    <h2>Profile</h2>
+    <p>
+        Computer Student passionate about problem solving, web development 
+        and building real-world projects.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Email: adisawant8180@gmail.com</p>
+    <p>Phone: 8180976701</p>
+    <p>Location: A/P kolegoan,solapur, Maharashtra</p>
+
+    <h2>Links</h2>
+    <p><a href="https://www.linkedin.com/in/herambyadav" target="_blank">LinkedIn Account</a></p>
+    <p><a href="https://github.com/herambyadav11-afk">GitHub</a></p>
+</div>
+
+<!-- RIGHT -->
+<div class="right">
+
+    <h1 class="name">ADITYA SAWANT</h1>
+    <p class="title"><span id="typing"></span></p>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+        I am a Computer Science student at MIT Academy of Engineering.
+        I love learning new technologies and building projects. My goal is to 
+        become an Computer Engineer and contribute to innovative tech solutions.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <p><strong>B.Tech CSE COMPUTER SCIENCE</strong></p>
+        <p>MIT Academy of Engineering, Pune</p>
+        <p>2025–2029 (Pursuing)</p>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python, C (Basics)</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li>Portfolio Website – HTML & CSS</li>
+            <li>Secure Vault – Python </li>
+            <li>Python Calculator</li>
+            <li>House Security System</li>
+            <li>rain water harwesting System – Agumented Reality </li>
+            <li>Parking Space Management system </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Nasscomm Certification</li>
+            <li>AI Capacity Building Anthropic Courses – IBM</li>
+            <li>The Importance of Data Visualization </li>
+            <li>Python Basics – Coursera</li>
+            <li>HTML & CSS – freeCodeCamp</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Active learner in Computer Science</li>
+            <li>Strong problem solving interest</li>
+        </ul>
+    </div>
+
+</div>
+</div>
+
+<button id="topBtn">⬆</button>
+
+<footer>
+ Thank you for visiting my portfolio
+</footer>
+
+<script>
+// DARK MODE
+const toggleBtn = document.getElementById("themeToggle");
+toggleBtn.onclick = () => {
+    document.body.classList.toggle("dark");
+    toggleBtn.textContent = document.body.classList.contains("dark")
+        ? " Light Mode" : " Dark Mode";
+};
+
+// TYPING TEXT
+const text = "computer Engineer";
+let i = 0;
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 80);
+    }
+}
+typeWriter();
+
+// SCROLL ANIMATION
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if(secTop < window.innerHeight / 1.2){
+            sec.classList.add("show");
+        }
+    });
+});
+
+// BACK TO TOP BUTTON
+const topBtn = document.getElementById("topBtn");
+window.onscroll = () => {
+    topBtn.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+};
+topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+// AUTO YEAR
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
